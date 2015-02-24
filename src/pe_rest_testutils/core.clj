@@ -11,6 +11,10 @@
     (mock/header req hdr val)
     req))
 
+(defn authorization-req-hdr-val
+  [auth-scheme auth-scheme-param-name auth-token]
+  (str auth-scheme " " auth-scheme-param-name "=\"" auth-token "\""))
+
 (defn mt
   [mt-type
    mt-subtype
@@ -29,7 +33,11 @@
     format-ind
     lang
     method
-    uri]
+    uri
+    hdr-apptxn-id
+    hdr-useragent-device-make
+    hdr-useragent-device-os
+    hdr-useragent-device-os-version]
    (req-w-std-hdrs mt-type
                    mt-subtype
                    version
@@ -38,6 +46,10 @@
                    lang
                    method
                    uri
+                   hdr-apptxn-id
+                   hdr-useragent-device-make
+                   hdr-useragent-device-os
+                   hdr-useragent-device-os-version
                    "TXN92019348"))
   ([mt-type
     mt-subtype
@@ -47,12 +59,16 @@
     lang
     method
     uri
+    hdr-apptxn-id
+    hdr-useragent-device-make
+    hdr-useragent-device-os
+    hdr-useragent-device-os-version
     apptxn-id]
    (-> (mock/request method uri)
        (header "Accept" (mt mt-type mt-subtype version format-ind))
        (header "Accept-Charset" charset)
        (header "Accept-Language" lang)
-       (header rumeta/hdr-apptxn-id apptxn-id)
-       (header rumeta/hdr-useragent-device-make "iPhone")
-       (header rumeta/hdr-useragent-device-os "iOS")
-       (header rumeta/hdr-useragent-device-os-version "8.1.2"))))
+       (header hdr-apptxn-id apptxn-id)
+       (header hdr-useragent-device-make "iPhone")
+       (header hdr-useragent-device-os "iOS")
+       (header hdr-useragent-device-os-version "8.1.2"))))
