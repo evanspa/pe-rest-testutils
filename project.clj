@@ -1,4 +1,4 @@
-(defproject pe-rest-testutils "0.0.1"
+(defproject pe-rest-testutils "0.0.2-SNAPSHOT"
   :description "A Clojure library providing a set of helper functions for unit testing REST APIs."
   :url "https://github.com/evanspa/pe-rest-testutils"
   :license {:name "MIT"
