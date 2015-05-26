@@ -1,4 +1,4 @@
-(defproject pe-rest-testutils "0.0.4"
+(defproject pe-rest-testutils "0.0.5-SNAPSHOT"
   :description "A Clojure library providing a set of helper functions for unit testing REST applications."
   :url "https://github.com/evanspa/pe-rest-testutils"
   :license {:name "MIT"
@@ -11,11 +11,11 @@
                  [org.clojure/data.codec "0.1.0"]
                  [ch.qos.logback/logback-classic "1.0.13"]
                  [org.slf4j/slf4j-api "1.7.5"]
-                 [pe-rest-utils "0.0.6-SNAPSHOT"]
+                 [pe-rest-utils "0.0.6"]
                  [ring-mock "0.1.5"]]
   :resource-paths ["resources"]
   :codox {:exclude [user]
-          :src-dir-uri "https://github.com/evanspa/pe-rest-testutils/blob/0.0.4/"
+          :src-dir-uri "https://github.com/evanspa/pe-rest-testutils/blob/0.0.5/"
           :src-linenum-anchor-prefix "L"}
   :profiles {:dev {:source-paths ["dev"]
                    :plugins [[cider/cider-nrepl "0.9.0-SNAPSHOT"]]
