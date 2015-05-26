@@ -44,57 +44,16 @@
   format-ind - Format indicator part of 'Accept' request header media type.
   lang - 'Accept-Language' request header value.
   method - The HTTP method.
-  uri - The request URI.
-  hdr-apptxn-id - Application transaction ID header name.
-  hdr-useragent-device-make - User-agent device make header name.
-  hdr-useragent-device-os - User-agent device operating system header name.
-  hdr-useragent-device-os-version - User-agent device operating system version
-  header name.
-  apptxn-id (optional) - The application transaction identifier to include as a
-  request header.  If nil, a hard-coded value will be used."
-  ([mt-type
-    mt-subtype
-    version
-    charset
-    format-ind
-    lang
-    method
-    uri
-    hdr-apptxn-id
-    hdr-useragent-device-make
-    hdr-useragent-device-os
-    hdr-useragent-device-os-version]
-   (req-w-std-hdrs mt-type
-                   mt-subtype
-                   version
-                   charset
-                   format-ind
-                   lang
-                   method
-                   uri
-                   hdr-apptxn-id
-                   hdr-useragent-device-make
-                   hdr-useragent-device-os
-                   hdr-useragent-device-os-version
-                   "TXN92019348"))
-  ([mt-type
-    mt-subtype
-    version
-    charset
-    format-ind
-    lang
-    method
-    uri
-    hdr-apptxn-id
-    hdr-useragent-device-make
-    hdr-useragent-device-os
-    hdr-useragent-device-os-version
-    apptxn-id]
-   (-> (mock/request method uri)
-       (header "Accept" (mt mt-type mt-subtype version format-ind))
-       (header "Accept-Charset" charset)
-       (header "Accept-Language" lang)
-       (header hdr-apptxn-id apptxn-id)
-       (header hdr-useragent-device-make "iPhone")
-       (header hdr-useragent-device-os "iOS")
-       (header hdr-useragent-device-os-version "8.1.2"))))
+  uri - The request URI."
+  [mt-type
+   mt-subtype
+   version
+   charset
+   format-ind
+   lang
+   method
+   uri]
+  (-> (mock/request method uri)
+      (header "Accept" (mt mt-type mt-subtype version format-ind))
+      (header "Accept-Charset" charset)
+      (header "Accept-Language" lang)))

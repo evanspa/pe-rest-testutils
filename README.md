@@ -27,7 +27,7 @@ pe-rest-testutils is available from Clojars.  Add the following dependency to yo
 `project.clj` file:
 
 ```
-[pe-rest-testutils "0.0.2"]
+[pe-rest-testutils "0.0.3"]
 ```
 
 ## pe-* Clojure Library Suite
@@ -35,7 +35,9 @@ The pe-* Clojure library suite is a set of Clojure libraries to aid in the
 development of Clojure and Java based applications.
 *(Each library is available on Clojars.)*
 + **[pe-core-utils](https://github.com/evanspa/pe-core-utils)**: provides a set
-  of various collection-related, date-related and other helpers functions.
+of various collection-related, date-related and other helpers functions.
++ **[pe-jdbc-utils](https://github.com/evanspa/pe-jdbc-utils)**: provides
+  a set of helper functions for working with JDBC.
 + **[pe-datomic-utils](https://github.com/evanspa/pe-datomic-utils)**: provides
   a set of helper functions for working with [Datomic](https://www.datomic.com).
 + **[pe-datomic-testutils](https://github.com/evanspa/pe-datomic-testutils)**: provides
