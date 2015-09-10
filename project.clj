@@ -11,11 +11,11 @@
                  [org.clojure/data.codec "0.1.0"]
                  [ch.qos.logback/logback-classic "1.0.13"]
                  [org.slf4j/slf4j-api "1.7.5"]
-                 [pe-rest-utils "0.0.28"]
+                 [pe-rest-utils "0.0.30"]
                  [ring-mock "0.1.5"]]
   :resource-paths ["resources"]
   :codox {:exclude [user]
-          :src-dir-uri "https://github.com/evanspa/pe-rest-testutils/blob/0.0.6/"
+          :src-dir-uri "https://github.com/evanspa/pe-rest-testutils/blob/0.0.7/"
           :src-linenum-anchor-prefix "L"}
   :profiles {:dev {:source-paths ["dev"]
                    :plugins [[cider/cider-nrepl "0.10.0-SNAPSHOT"]]

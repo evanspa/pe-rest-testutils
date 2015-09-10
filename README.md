@@ -27,7 +27,7 @@ pe-rest-testutils is available from Clojars.  Add the following dependency to yo
 `project.clj` file:
 
 ```
-[pe-rest-testutils "0.0.6"]
+[pe-rest-testutils "0.0.7"]
 ```
 
 ## pe-* Clojure Library Suite
